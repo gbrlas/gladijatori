@@ -1,0 +1,25 @@
+#header {
+  position: absolute;
+   top: 0;
+   width: 100%;
+   margin: 0;
+   left: 0px;
+   margin-left: 0;
+   background-color:black;
+   height:50px;
+ 
+}
+.regLblPos{
+
+   position:fixed;
+   right:10px;
+   top:5px;
+}
+
+
+.homePagePos{
+
+   position:fixed;
+   left:10px;
+   top:5px;
+}

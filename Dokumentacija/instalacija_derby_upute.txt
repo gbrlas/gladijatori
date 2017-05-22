@@ -1,0 +1,35 @@
+--------------------------------------------------------------
+	INSTALACIJA DERBY BAZE PODATAKA
+--------------------------------------------------------------
+1) Skinuti zip sa sljedećeg linka
+http://www.us.apache.org/dist//db/derby/db-derby-10.12.1.1/db-derby-10.12.1.1-bin.zip
+
+2)Raspakirati sadržaj zipa u neki poseban direktorij npr. E:\usr
+
+3)Napraviti poseban direktorij u kojem će se čuvati napravljene baze podataka npr E:\derby-baze
+
+4)U derby-baze folder raspakirati sadržaj sljedećeg zipa
+https://ferko.fer.hr/ferko/DownloadFile.action?courseInstanceID=2014L%2F38047&fileID=495
+
+5)Podesiti datoteku setenv.bat iz zipa sa adresama gdje ste smjestili prvi zip i drugi zip
+
+6)Skripta server-start.bat podiže bazu podataka a skripta server-stop.bat zaustavlja.
+
+7)Skripta ij-console.bat pokreće okruženje u kojem se mogu stvarati konkretne baze podataka
+
+8)Pokrenite bazu podataka i pokrenite ij-console.bat
+
+9)Upisati sljedeće naredbe:
+
+connect 'jdbc:derby://localhost:1527/rukometBaza;user=sa;password=sapwd22;create=true';
+
+CALL SYSCS_UTIL.SYSCS_CREATE_USER('admin', 'rukometAdmin');
+
+CALL SYSCS_UTIL.SYSCS_SET_DATABASE_PROPERTY('derby.database.fullAccessUsers', 'admin');
+
+disconnect;
+
+connect 'jdbc:derby://localhost:1527/rukometBaza;user=admin;password=rukometAdmin';
+
+Sada možete deployati web aplikaciju u tomcatu, ako je sve dobro prošlo možete testirati u ij okruženju jesu li se tablice dobro stvorile (npr SELECT * FROM KORISNIK upitom)
+

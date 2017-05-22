@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="gladijatori">
+        <wb-resource deploy-path="/web/aplikacija/WEB-INF/classes" source-path="/IzvorniKod"/>
+        <wb-resource deploy-path="/" source-path="/web/aplikacija"/>
+        <property name="context-root" value="aplikacija"/>
+        <property name="java-output-path" value="/gladijatori/web/aplikacija/WEB-INF/classes"/>
+    </wb-module>
+</project-modules>
